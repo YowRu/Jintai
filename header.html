@@ -1,0 +1,100 @@
+<div class="row1">
+    <a href="index.html"><h1>logo</h1></a>
+    <div class="right">
+        <a href="#choice">選擇金泰</a>
+        <a href="#about">關於</a>
+        <a href="#trade">交易</a>
+        <a href="#download">下載</a>
+        <a href="#contact">聯絡我們</a>
+    </div>
+    <div class="btn">
+        <a >登入</a>
+        <a class="yellow">馬上開戶</a>
+    </div>
+    <nav>
+        <span></span>
+        <span></span>
+        <span></span>
+    </nav>
+    <div class="menu">
+        <a href="#choice">選擇金泰</a>
+        <a href="#about">關於</a>
+        <a href="#trade">交易</a>
+        <a href="#download">下載</a>
+        <a href="#contact">聯絡我們</a>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+    let $H=$(window).height();
+    let $W=$(window).width();
+    $('header .bg').height($H+70);
+    let h=$('header .row1 .menu').height();
+    if($H-40 < h){
+       $('header .row1 .menu').css({'overflow-y':'scroll'});
+       }
+
+    //resize   
+   $(window).resize(function(){
+        let $H=$(window).height();
+        let $W=$(window).width();
+        $('header .menu').hide();
+        $('#main').removeClass('sliderDown');
+        $("body").removeClass('menuOpen');
+        let h=$('header .row1 .menu').height();
+        if($H-40 < h){
+            $('header .row1 .menu').css({'overflow-y':'scroll'});
+        }
+   });
+
+   //header
+   $(document).scroll(function(){
+      if($W<750){
+        $('header').removeClass('bgColor');
+      }else{
+        $('header').addClass('bgColor');
+      }
+   });
+
+    /*menu*/
+    $('header nav').click(function(){
+        $('header .menu').slideToggle();
+        $("body").toggleClass('menuOpen');
+        $('#main').toggleClass('sliderDown');
+        $('header').toggleClass('open');
+    });
+    $('header .menu a').click(function(){
+        $('header .menu').slideUp();
+        $("body").removeClass('menuOpen');
+        $('header').removeClass('open');
+    });
+
+    $('a[href=#choice]').click(function () {
+        $('html,body').animate({
+            scrollTop: $('#choice').offset().top - 122
+        }, 800);
+   });
+    $('a[href=#about]').click(function () {
+        $('html,body').animate({
+            scrollTop: $('#about').offset().top - 61
+        }, 800);
+    });
+        
+    $('a[href=#trade]').click(function () {
+            $('html,body').animate({
+                scrollTop: $('#trade').offset().top - 61
+            }, 800);
+    });
+    $('a[href=#download]').click(function () {
+            $('html,body').animate({
+                scrollTop: $('#download').offset().top - 61
+            }, 800);
+    });
+    $('a[href=#contact]').click(function () {
+        
+            $('html,body').animate({
+                scrollTop: $('#contact').offset().top - 61
+            }, 800);
+    });
+    });
+</script>

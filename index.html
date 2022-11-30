@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <title>金泰資產</title>
+</head>
+<body>
+    <header></header>
+    <div id="main">
+        <a id="choice" href="">
+            <div class="choiceWP">
+                <img src="img/choiceText1.png" class="choiceText"alt="">
+                <img src="img/choiceText_M.png" class="choiceText_M"alt="">
+                <img src="img/earth.png" class="earth" alt="">
+            </div>
+        </a>
+        <div id="about">
+            <ul>
+                <li>
+                    <p>純線上操作，零入金門檻<br>融資融券和現金交易自由選擇</p>
+                    <span>註冊開戶入金交易全程線上化，入金金額無限制，一個賬戶隨時隨地交易全球多個資本市場。輕鬆融資融券或現金交易，滿足多種客戶需求。</span>
+                </li>
+                <li>
+                    <p>運營受監管，安全有保障<br>資金資產託管於知名銀行券商</p>
+                    <span>新加坡金融管理局監管，指定星展銀行、盈透證券等提供資金資產託管，金泰為客戶提供安全放心的交易平台。</span>
+                </li>
+                <li>
+                    <p>多項零費用，收益最大化<br>所有產品​T+0交易免費無限次</p>
+                    <span>金不收取託管費、入金出金費、貨幣兌換費、賬戶維護費、閒置費等，不對交易次數設限，致力於為客戶實現收益最大化。</span>
+                </li>
+                <li class="btn">開通帳戶 →</li>
+            </ul>
+        </div>
+        <div id="trade">
+            <div class="title">一站式交易平台 - 總有產品適合您</div>
+            <div class="list">
+                <div class="flex">
+                    <p>台灣/上市/上櫃股票</p>
+                    <span>實時行情，知己知彼</span>
+                </div>
+                <div class="flex">
+                    <p>申購/抽籤</p>
+                    <span>熱門產品，觸手可及</span>
+                </div>
+            </div>
+            <img src="img/trade.png" alt="">
+            <div class="bottomWP">
+                <div class="bottom">
+                    <div class="left">
+                        <div class="title">低佣金 輕鬆交易多個市場</div>
+                        <p>金泰不設入金門檻</p>
+                        <span>金泰致力於最大程度助力客戶投資，因此金泰對入金金額不設置任何限制。</span>
+                    </div>
+                    <img src="img/trade1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="download">
+            <div class="wp">
+                <div class="left">
+                    <div class="text">
+                        <div class="title">技術領先的交易平台</div>
+                        <p>免費實時股票報價</p>
+                        <span>通過我們的免費市場數據，保持投資的領先地位。此外，這些市場數據能夠提供更深入的視角，協助您更好地了解未來價格趨勢。</span>
+                    </div>
+                    <p class="btn">立即下載 →</p>
+                    <div class="download">
+                        <a href=""><img src="img/android.png" alt=""></a>
+                        <a href=""><img src="img/ios.png" alt=""></a>
+                        <a href=""><img src="img/net.png" alt=""></a>
+                        <a href=""><img src="img/qrDownload.png" alt=""></a>
+                    </div>
+                </div>
+                <img src="img/phone.png" alt="" class="phone">
+            </div>
+        </div>
+        <div id="contact">
+            <div class="wp">
+                <div class="left">
+                    <div class="title">聯絡我們</div>
+                    <p>客服時間：<br>上午8:30至下午6:30(週一至週五)</p>
+                    <p>地址：<br>香港中環中心 中環皇后大道中99號 第62層</p>
+                    <div class="imgWp">
+                        <img src="img/QR1.png" alt="">
+                        <img src="img/QR2.png" alt="">
+                    </div>
+                </div>
+                <img src="img/hand.png" alt="">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="img/chat.png" alt="">
+        <p>立即諮詢</p>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            let W = $(window).width();
+            let h = $('#choice img.earth').height();
+            $('#choice img.choiceText').height(h*0.6);
+        
+            if(751>W){
+                let h = $('#choice img.earth').height();
+                $('#choice img.choiceText').height(h*0.8);
+            }
+            $('footer').mouseover(function(){
+                $(this).addClass('show');
+            });
+            $('footer').mouseleave(function(){
+                $(this).removeClass('show');
+            });
+            $(window).resize(function(){
+                let W = $(window).width();
+                let h = $('#choice img.earth').height();
+                $('#choice img.choiceText').height(h*0.6);
+            
+                if(751>W){
+                    let h = $('#choice img.earth').height();
+                    $('#choice img.choiceText').height(h*0.8);
+                }
+                $('footer').mouseover(function(){
+                    $(this).addClass('show');
+                });
+                $('footer').mouseleave(function(){
+                    $(this).removeClass('show');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
