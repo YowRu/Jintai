@@ -52,7 +52,7 @@ background-color: transparent;max-width:1200px;width: 100%;margin:0 auto;}
 #choice img.choiceText{width:auto;height: 285px;}
 #choice img.choiceText_M{display: none;}
 #choice img.earth{width:40%;}
-#about{background: #e9ecef;color: #333;padding:100px 70px 140px;}
+#about{background: #000;color: #333;padding:100px 70px 140px;}
 #about ul{display: flex;justify-content: space-around;align-items: center;position: relative;
     max-width:1200px;margin: 0 auto;}
 #about ul li{width: 30%;height: 300px;padding:30px;box-sizing: border-box;background-color: #fff;transition: all .8s;
